@@ -1,0 +1,73 @@
+﻿@model DatabaseFirst.Models.EficaaBi
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>EficaaBi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StructureCode" class="control-label"></label>
+                <input asp-for="StructureCode" class="form-control" />
+                <span asp-validation-for="StructureCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transformersno" class="control-label"></label>
+                <input asp-for="Transformersno" class="form-control" />
+                <span asp-validation-for="Transformersno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceSerialNo" class="control-label"></label>
+                <input asp-for="DeviceSerialNo" class="form-control" />
+                <span asp-validation-for="DeviceSerialNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceIp" class="control-label"></label>
+                <input asp-for="DeviceIp" class="form-control" />
+                <span asp-validation-for="DeviceIp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NwIntStart" class="control-label"></label>
+                <input asp-for="NwIntStart" class="form-control" />
+                <span asp-validation-for="NwIntStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NwIntEnd" class="control-label"></label>
+                <input asp-for="NwIntEnd" class="form-control" />
+                <span asp-validation-for="NwIntEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sts" class="control-label"></label>
+                <input asp-for="Sts" class="form-control" />
+                <span asp-validation-for="Sts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConvertedToDHhMmSsMs" class="control-label"></label>
+                <input asp-for="ConvertedToDHhMmSsMs" class="form-control" />
+                <span asp-validation-for="ConvertedToDHhMmSsMs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
